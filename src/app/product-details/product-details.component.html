@@ -1,0 +1,44 @@
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <img src="{{showImageUrl}}" class="card-img-top p-2" alt="...">
+        <div class="card-body">
+          <a href="#" class="btn btn-hover button-style m-3">Hemen AL</a>
+          <a href="#" class="btn btn-hover button-style2 m-3">Sepete Ekle</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+         
+          <p class="card-title name-text-color">{{productDetail.name}}</p>
+          <p class="card-text description-text-color">{{productDetail.description}}</p>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" class="yellow-icon" *ngFor="let star of productStarArray">star</mat-icon> 
+      
+          <div class="card productdetails-bg-color">
+              <h6 class="green-text-color">SEPETTE 250 TL İNDİRİMLİ FİYAT</h6>
+              <h3 class="price-text-color">{{productDetail.price}} {{productDetail.currency}}</h3>
+              
+             <p class="cargo-description-style p-1"> <mat-icon aria-hidden="false" aria-label="Example home icon" class="green-icon">local_shipping</mat-icon> {{productDetail.cargo}} </p>
+            <p class="cargonote-text-color">{{productDetail.cargoNote}}</p>        
+          </div>
+         <p class="p-text-color m-3">Bu Ürünün Satıcıları</p>
+         <p class="p-font-color">Bu Ürünün Satıcısı:  <mat-icon aria-hidden="false" aria-label="Example home icon" class="yellow-icon">stars</mat-icon> <a class="blue-icon">{{productDetail.saler}}</a> </p>
+         <p class="p-font-color">Diğer Satıcılar: <a class="blue-icon">İncele</a></p>
+         <hr>
+<p class="p-font-color m-1 p-1">Dahili Hafıza Seçiniz</p>
+          <a href="#" class="btn btn-style btn-hover" *ngFor="let memory of productDetail.internalmemory">{{memory}}</a>
+          <!-- <a href="#" class="btn btn-light btn-style btn-hover">128 GB</a>
+          <a href="#" class="btn btn-light btn-style btn-hover">256 GB</a> -->
+          <p class="p-font-color m-1 p-1">Renk Seçiniz</p>
+          <a  [style.background-color]="color.rgbcode" class="btn btn-hover button-color-style" *ngFor="let color of productDetail.color" (click)="getImageUrlByColor(color.name)" >{{color.name}}</a>
+          <!-- <a href="#" class="btn btn-light btn-style btn-hover">Kırmızı</a>
+          <a href="#" class="btn btn-light btn-style btn-hover">Mor</a>
+          <a href="#" class="btn btn-light btn-style btn-hover">Siyah</a>
+          <a href="#" class="btn btn-light btn-style btn-hover">Yeşil</a> -->
+        </div>
+      </div>
+    </div>
+  </div>

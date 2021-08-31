@@ -1,0 +1,157 @@
+<div class="m-2">
+<mat-accordion>
+    <mat-expansion-panel id="1" (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false" [expanded]="true"> 
+                         <!-- burası materiallerin otomatik açık gelmesi için expanded true kullanıyoruz. -->
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>Kategoriler</h2>
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p class="p-text p-text-color">Cep Telefonu veya Aksesuar</p> 
+      <ul style="list-style-type : none;">
+        <li *ngFor="let category of categories"><a routerLink='/products/category/{{category.id}}'>{{category.name}}</a></li>
+        <!-- <li><a href="#">Cep Telefonu Aksesuar</a></li>
+        <li><a href="#">Giyilebilir Teknoloji</a></li>
+        <li><a href="#">Sabit Telefonlar</a></li>
+        <li><a href="#">Cep Telefonu Parçaları</a></li>
+        <li><a href="#">Hafıza Kartı</a></li>
+        <li><a href="#">Sim Kart, Hat</a></li> -->
+      </ul>
+      
+      
+    </mat-expansion-panel>
+
+    
+
+    
+    
+    <!-- popüler filteler  -->
+    <mat-expansion-panel id="2" (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title>
+<p class="p-text-color">Popüler Filtreler</p> 
+</mat-panel-title>
+<mat-panel-description>
+</mat-panel-description>
+</mat-expansion-panel-header>
+<!-- butona slide toggle eklemek için -->
+<div class="row div-text-height">
+  <div class="col-md-9">Süper Fiyat</div>
+  <div class="col-md-3"><mat-slide-toggle></mat-slide-toggle>
+  </div>
+  <div class="col-md-9">Ücretsiz Kargo</div>
+  <div class="col-md-3"><mat-slide-toggle></mat-slide-toggle>
+  </div>
+  <div class="col-md-9">Aynı Gün Kargo</div>
+  <div class="col-md-3"><mat-slide-toggle></mat-slide-toggle>
+  </div>
+  <div class="col-md-9">Başarılı Satıcı</div>
+  <div class="col-md-3"><mat-slide-toggle></mat-slide-toggle>
+  </div>
+  <div class="col-md-9">Aynı Gün Teslimat</div>
+  <div class="col-md-3"><mat-slide-toggle></mat-slide-toggle>
+  </div>
+  <div class="col-md-9">Hediyeli Ürünler</div>
+  <div class="col-md-3"><mat-slide-toggle></mat-slide-toggle>
+  </div>
+</div>
+</mat-expansion-panel>
+
+<!-- seçili kritirlerde ara -->
+<mat-expansion-panel id="3" (opened)="panelOpenState = true"
+(closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title>
+<p class="p-text-color">Seçili Kriterlerde Ara</p>
+</mat-panel-title>
+<mat-panel-description>
+</mat-panel-description>
+</mat-expansion-panel-header>
+<div class="input-group col d-flex m-2">
+  <input type="text" class="form-control input-border" placeholder="Ara" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-searchfind" type="button">Ara</button>
+  </div>
+</div>
+</mat-expansion-panel>
+
+<!-- fiyat -->
+<mat-expansion-panel id="3" (opened)="panelOpenState = true"
+(closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title>
+<p class="p-text-color">Fiyat</p>
+</mat-panel-title>
+<mat-panel-description>
+</mat-panel-description>
+</mat-expansion-panel-header>
+<ul style="  list-style-type : none;">
+  <li> <mat-checkbox>0-25</mat-checkbox></li>
+  <li> <mat-checkbox>25-50</mat-checkbox></li>
+  <li> <mat-checkbox>50-100</mat-checkbox></li>
+  <li> <mat-checkbox>100-250</mat-checkbox></li>
+  <li> <mat-checkbox>250-500</mat-checkbox></li>
+  <li> <mat-checkbox>500-750</mat-checkbox></li>
+  <li> <mat-checkbox>750-1000</mat-checkbox></li>
+  <li> <mat-checkbox>1000-1500</mat-checkbox></li>
+  <li> <mat-checkbox>1500-2000</mat-checkbox></li>
+  <li> <mat-checkbox>2000-2500</mat-checkbox></li>
+  <li> <mat-checkbox>2500-3000</mat-checkbox></li>
+</ul>
+</mat-expansion-panel>
+
+<!-- Durum -->
+<mat-expansion-panel id="3" (opened)="panelOpenState = true"
+(closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title>
+<p class="p-text-color">Durum</p>
+</mat-panel-title>
+<mat-panel-description>
+</mat-panel-description>
+</mat-expansion-panel-header>
+<ul style="  list-style-type : none;">
+  <li> <mat-checkbox>Sıfır</mat-checkbox></li>
+  <li> <mat-checkbox>İkinci El</mat-checkbox></li>
+</ul>
+</mat-expansion-panel>
+
+<!-- satıldığı bölge -->
+<mat-expansion-panel id="3" (opened)="panelOpenState = true"
+(closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title>
+<p class="p-text-color">Satıldığı Bölge</p>
+</mat-panel-title>
+<mat-panel-description>
+</mat-panel-description>
+</mat-expansion-panel-header>
+<ul style="  list-style-type : none;">
+  <li> <mat-checkbox>Türkiye</mat-checkbox></li>
+  <li> <mat-checkbox>Yurt Dışı</mat-checkbox></li>
+</ul>
+</mat-expansion-panel>
+
+<!-- satıcı -->
+<mat-expansion-panel id="3" (opened)="panelOpenState = true"
+(closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title>
+<p class="p-text-color">Satıcı</p>
+</mat-panel-title>
+<mat-panel-description>
+</mat-panel-description>
+</mat-expansion-panel-header>
+<div class="input-group col d-flex m-2">
+  <input type="text" class="form-control input-border" placeholder="Ara" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-searchfind" type="button">Ara</button>
+  </div>
+</div>
+</mat-expansion-panel>
+  </mat-accordion>
+</div>  

@@ -1,0 +1,155 @@
+.headerlink-text {
+    color: rgb(14, 5, 5) !important;
+    text-decoration: none !important;
+    font-size:12px;
+}
+
+
+.link-text {
+  color: rgb(58, 57, 57) !important;
+    text-decoration: none !important;
+    font-size: small !important;
+    
+}
+
+.login-style{
+  text-decoration: none;
+  font-size: 13px;
+  color:#696a6b;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+}
+
+.link-text-hover:hover{
+  background-color: white;
+  color: white;
+}
+
+a.link-hover:hover{
+  border-radius: 13px;
+  color: rgb(54, 101, 243);
+}
+
+i:hover{
+  color:#f27a1a !important;
+}
+
+
+
+.search-font-size{
+  font-size: 0.9rem !important;
+  background-color: white !important; 
+  border: 2px solid #ddd;
+  border-radius: 15px;
+}
+
+.margin-auto{
+  margin: auto !important;
+}
+
+
+ul.color-text>li>a{
+  color: rgb(88, 87, 87) !important;
+  font-size: 13px !important;
+  font-weight: bold;
+  font-family:sans-serif
+  
+}
+
+
+.circle {
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.span-text{
+  vertical-align: bottom;
+  display: flex;
+  justify-content: center;
+  color: rgb(95, 93, 93);
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.circle:hover{
+  border: 2px solid #f27a1a;
+}
+
+.input-border:hover{
+  border: 1px solid rgb(54, 101, 243);
+}
+
+.input-border{
+  border-radius: 15px;
+  height: 2.5rem;
+  background-color:#EEEEEE;
+}
+
+.btn-searchfind{
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(54, 101, 243) !important;
+  color: rgb(255, 255, 255);
+}
+.btn-hover:hover{
+  background-color:#0905ee !important;
+}
+
+.btn-a{
+  font-size: 13px !important;
+}
+
+.navbarbgcolor{
+  background-color: white;
+}
+
+.line-height{
+  line-height: 2em;
+}
+
+.header-bg-color{
+  background-color: #0071CF;
+  height: 105px !important;
+}
+
+
+.navbar-style{
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  padding: 10px;
+  background-color:#EEEEEE;
+  border: 2px solid #dbd9d9 !important;
+
+}
+
+ul>li>a{
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 2em;
+  color:#3c4146;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+}
+
+
+ul>li{
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 2em;
+  color: black;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+ul>li>a:hover{
+color: rgb(54, 101, 243);
+background-color: rgb(243, 243, 243);
+}
+
+.search-button-style{
+  min-width: 500px;
+}

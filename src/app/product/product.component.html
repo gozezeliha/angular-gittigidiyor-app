@@ -1,0 +1,334 @@
+<div class="row m-2" *ngIf='showItems'>
+  <div class="col-md-9">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://mcdn01.gittigidiyor.net/ps/telefondcplifestyle_1623933171.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://mcdn01.gittigidiyor.net/ps/garantilicepdcpurunlu_1626082076.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://mcdn01.gittigidiyor.net/ps/denemeeee_1624433190.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  </div>
+  <div class="col-md-3">
+    <mat-card class="example-card w-100 h-100 card-style-hover">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <mat-card-content class="h-100">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="https://mcdn01.gittigidiyor.net/69037/tn30/690371488_tn30_0.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://mcdn01.gittigidiyor.net/66651/tn30/666514777_tn30_0.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://mcdn01.gittigidiyor.net/69922/tn30/699224587_tn30_0.jpg" alt="Third slide">
+            </div>
+    
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    
+   
+  </div>  
+  
+</div>
+
+<div class="row m-2" *ngIf='showItems'>
+  <div class="col-md-6">
+    <div class="card card-style-hover">
+      <img class="card-img-top" src="https://mcdn01.gittigidiyor.net/ps/cep_1602826627.jpg" alt="Card image cap">
+      <div class="card-body">
+        <a href="#" class="btn btn-style btn-style-hover w-100">Cep Telefonu</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card card-style-hover">
+      <img class="card-img-top" src="https://mcdn01.gittigidiyor.net/ps/saat_1602826694.jpg" alt="Card image cap">
+      <div class="card-body">
+        <a href="#" class="btn btn-style btn-style-hover w-100">Giyilebilir Teknoloji</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row m-2" *ngIf='showItems'>
+  <div class="col-md-6">
+    <div class="card card-style-hover">
+      <img class="card-img-top" src="https://mcdn01.gittigidiyor.net/ps/kulaklik_1602826751.jpg" alt="Card image cap">
+      <div class="card-body">
+        <a href="#" class="btn btn-style btn-style-hover w-100">Kulaklık</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card card-style-hover">
+      <img class="card-img-top" src="https://mcdn01.gittigidiyor.net/ps/outlet_1602826778.jpg" alt="Card image cap">
+      <div class="card-body">
+        <a href="#" class="btn btn-style btn-style-hover w-100">Outlet Telefonlar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row m-2" *ngIf='showItems'>
+  <div class="col-md-6">
+    <div class="card card-style-hover">
+      <img class="card-img-top" src="https://mcdn01.gittigidiyor.net/ps/kilif_1602826721.jpg" alt="Card image cap">
+      <div class="card-body">
+        <a href="#" class="btn btn-style btn-style-hover w-100">Kılıflar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card card-style-hover">
+      <img class="card-img-top" src="https://mcdn01.gittigidiyor.net/ps/yedek_1602826660.jpg" alt="Card image cap">
+      <div class="card-body">
+        <a href="#" class="btn btn-style btn-style-hover w-100">Cep Telefonu Yedek Parça</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-3 p-1" *ngFor="let product of products">
+        <mat-card class="example-card card-style-hover" >
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+            </mat-card-header>
+            <img mat-card-image src="{{product.imageUrl}}" alt="Photo of a Shiba Inu" routerLink='/productDetail/{{product.id}}'>
+            <mat-card-content>
+              <p>
+               {{product.name}}
+              </p>
+              <p class="price-style">{{product.price}} TL</p>
+
+          
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn-basket w-100" (click)="addToCart(product)" >Sepete Ekle</button>
+            </mat-card-actions>
+          </mat-card>          
+    </div>
+
+    <!-- <div class="col-md-3 p-1">
+        <mat-card class="example-card card-style-hover">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+            </mat-card-header>
+            <img mat-card-image src="https://mcdn01.gittigidiyor.net/68960/tn30/689602182_tn30_0.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Apple Beyaz Spor Kordon Akıllı Saat
+              </p>
+              <p class="price-style">5.000 TL</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+            </mat-card-actions>
+          </mat-card>          
+    </div>
+
+    <div class="col-md-3 p-1">
+        <mat-card class="example-card card-style-hover">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+            </mat-card-header>
+            <img mat-card-image src="https://mcdn01.gittigidiyor.net/69922/tn30/699224587_tn30_0.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Alcatel MT40 Pink Akıllı Saat </p>
+              <p class="price-style">5.000 TL</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+            </mat-card-actions>
+          </mat-card>          
+    </div>
+
+    <div class="col-md-3 p-1">
+        <mat-card class="example-card card-style-hover">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+            </mat-card-header>
+            <img mat-card-image src="https://mcdn01.gittigidiyor.net/71098/tn30/710983214_tn30_1.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Philips Kulak İçi Bluetooth Kulaklık
+              </p>
+              <p class="price-style">5.000 TL</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+            </mat-card-actions>
+          </mat-card>          
+    </div>
+
+
+    <div class="col-md-3 p-1">
+        <mat-card class="example-card card-style-hover">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+            </mat-card-header>
+            <img mat-card-image src="https://mcdn01.gittigidiyor.net/70835/tn30/708350920_tn30_1.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Philips Gürültü Önleyici Kablosuz Kulaklık
+              </p>
+              <p class="price-style">5.000 TL</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+            </mat-card-actions>
+          </mat-card>          
+    </div>
+
+
+    <div class="col-md-3 p-1">
+        <mat-card class="example-card card-style-hover">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+            </mat-card-header>
+            <img mat-card-image src="https://mcdn01.gittigidiyor.net/70987/tn30/709877943_tn30_0.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                Meizu Lite Bluetooth Spor Kulaklık
+              </p>
+              <p class="price-style">5.000 TL</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+            </mat-card-actions>
+          </mat-card>          
+    </div>
+
+    <div class="col-md-3 p-1">
+      <mat-card class="example-card card-style-hover">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+          </mat-card-header>
+          <img mat-card-image src="https://mcdn01.gittigidiyor.net/70435/tn30/704357923_tn30_0.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              Xiaomi Redmi Note 10 5G Cep Telefonu
+            </p>
+            <p class="price-style">5.000 TL</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+          </mat-card-actions>
+        </mat-card>          
+  </div>
+
+  <div class="col-md-3 p-1">
+    <mat-card class="example-card card-style-hover">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+        </mat-card-header>
+        <img mat-card-image src="https://mcdn01.gittigidiyor.net/67999/tn30/679999414_tn30_0.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Xiaomi Redmi Note 10 5G Cep Telefonu
+          </p>
+          <p class="price-style">5.000 TL</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+        </mat-card-actions>
+      </mat-card>          
+</div>
+
+<div class="col-md-3 p-1">
+  <mat-card class="example-card card-style-hover">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <img mat-card-image src="https://mcdn01.gittigidiyor.net/69672/tn30/696729979_tn30_2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Xiaomi Redmi Note 10 5G Cep Telefonu
+        </p>
+        <p class="price-style">5.000 TL</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+      </mat-card-actions>
+    </mat-card>          
+</div>
+
+<div class="col-md-3 p-1">
+  <mat-card class="example-card card-style-hover">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <img mat-card-image src="https://mcdn01.gittigidiyor.net/63920/tn30/639205612_tn30_0.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Xiaomi Redmi Note 10 5G Cep Telefonu
+        </p>
+        <p class="price-style">5.000 TL</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+      </mat-card-actions>
+    </mat-card>          
+</div>
+
+<div class="col-md-3 p-1">
+  <mat-card class="example-card card-style-hover">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <img mat-card-image src="https://mcdn01.gittigidiyor.net/71639/tn30/716391927_tn30_0.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Xiaomi Redmi Note 10 5G Cep Telefonu
+        </p>
+        <p class="price-style">5.000 TL</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+      </mat-card-actions>
+    </mat-card>          
+</div>
+
+<div class="col-md-3 p-1">
+  <mat-card class="example-card card-style-hover">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+      </mat-card-header>
+      <img mat-card-image src="https://mcdn01.gittigidiyor.net/66459/tn30/664594670_tn30_0.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Xiaomi Redmi Note 10 5G Cep Telefonu
+        </p>
+        <p class="price-style">787,00 TL</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button class="btn-basket w-100">Sepete Ekle</button>
+      </mat-card-actions>
+    </mat-card>          
+</div> -->
+
+
+
+    
+</div>
